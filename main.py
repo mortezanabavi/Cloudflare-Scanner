@@ -2,7 +2,7 @@ import ipaddress, requests
 from multiprocessing import Process
 import time, random
 
-ip_ranges = [line.strip() for line in open('ips.txt', 'r').readlines()]
+ip_ranges = [line.strip() for line in open('ips.txt', 'r').readlines()] #IP ranges
 
 def range_test(network, ping):
     for ip in network:
