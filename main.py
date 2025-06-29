@@ -3,7 +3,7 @@ from multiprocessing import Process
 import time, random, urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-with open('ip.txt', 'r') as f:
+with open('ips.txt', 'r') as f:
     ip_ranges = [line.strip() for line in f if line.strip()]
 
 def range_test(network):
