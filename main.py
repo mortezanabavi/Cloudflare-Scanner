@@ -32,6 +32,6 @@ def scan_range(ip_range):
 
 if __name__ == '__main__':
     print(f"[!] Starting scan of {len(ip_ranges)} ranges...")
-    with Pool(processes=min(20, cpu_count())) as pool:
+    with Pool(processes=min(50, cpu_count())) as pool:
         random.shuffle(ip_ranges)
         pool.map(scan_range, ip_ranges)
